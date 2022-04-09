@@ -14,7 +14,7 @@ public class Alfabank extends TestBase{
     void checkOpenPageInternetBankTest() {
 
         step("Клик по кнопке Интернет-банк", () -> {
-            $(".H1Cda9").click();
+            $("//a[text()='Интернет-банк']").click();
         });
 
         step("title главной страницы должен быть: Интернет-банк «Альфа-Клик»", () -> {
