@@ -12,6 +12,9 @@ public class Alfabank {
     @Test
     @DisplayName("Переход на страницу Интернет-банка")
     void checkOpenPageInternetBankTest() {
+        step("Открытие страницы Альфа-банка", () ->
+                open("https://alfabank.ru/"));
+
         step("Клик по кнопке Интернет-банк", () -> {
             $(".H1Cda9").click();
         });
@@ -27,6 +30,9 @@ public class Alfabank {
     @Test
     @DisplayName("Проверка заголовка блока обратной связи")
     void titleFeedback() {
+        step("Открытие страницы Альфа-банка", () ->
+                open("https://alfabank.ru/"));
+
         step("Находим заголовок", () ->
                 $x("//p[text()='Ваши персональные предложения готовы']").shouldHave(text("Ваши персональные предложения готовы")));
     }
@@ -98,6 +104,9 @@ public class Alfabank {
     @Test
     @DisplayName("Проверка ошибок в Console log")
     void consoleShouldNotHaveErrorsTest() {
+        step("Открытие страницы Альфа-банка", () ->
+                open("https://alfabank.ru/"));
+
         step("Проверяем, что консоль не содержит  ошибок 'SEVERE'", () -> {
             String consoleLogs = DriverUtils.getConsoleLogs();
             String errorText = "SEVERE";
