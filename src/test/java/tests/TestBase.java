@@ -15,6 +15,10 @@ import static io.qameta.allure.Allure.step;
 public class TestBase {
     @BeforeAll
     static void beforeAll() {
+        step("Открыть сайт alfabank.ru", () -> {
+            open("https://alfabank.ru/");
+        });
+
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
 
         Configuration.browserSize = System.getProperty("size", "1920x1080");
@@ -29,13 +33,6 @@ public class TestBase {
         capabilities.setCapability("enableVideo", true);
         Configuration.browserCapabilities = capabilities;
         Configuration.remote = "https://" + user + ":" + password + "@" + remote;
-    }
-
-    @BeforeEach
-    void openLabirint() {
-        step("Открыть сайт alfabank.ru", () -> {
-            open("https://alfabank.ru/");
-        });
     }
 
     @AfterEach
