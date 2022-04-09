@@ -23,16 +23,17 @@ public class TestBase {
 
         Configuration.browserSize = System.getProperty("size", "1920x1080");
         Configuration.browser = System.getProperty("browser", "chrome");
-
+//
         String user = System.getProperty("user");
         String password = System.getProperty("password");
-        String remote = System.getProperty("remote");
+//        String remote = System.getProperty("remote");
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC", true);
         capabilities.setCapability("enableVideo", true);
         Configuration.browserCapabilities = capabilities;
-        Configuration.remote = "https://" + user + ":" + password + "@" + remote;
+//        Configuration.remote = "https://" + user + ":" + password + "@" + remote;
+        Configuration.remote = "https://" + user + ":" + password + "@selenoid.autotests.cloud/wd/hub";
     }
 
     @AfterEach
