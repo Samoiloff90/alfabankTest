@@ -32,7 +32,7 @@ public class TestBase {
     }
 
     @BeforeEach
-    void openLabirint() {
+    void openAlfa() {
         step("Открыть сайт alfabank.ru", () -> {
             open("https://alfabank.ru/");
         });
