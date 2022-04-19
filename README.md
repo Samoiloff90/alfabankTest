@@ -1,5 +1,5 @@
 # Проект по автоматизации тестирования сайта Альфа-банк
-## <a target="_blank" href="https://www.labirint.ru/">alfabank.ru</a>
+## <a target="_blank" href="https://www.alfabank.ru/">alfabank.ru</a>
 
 ## :floppy_disk: Содержание:
 
@@ -35,7 +35,7 @@
 - Проверка ошибок в Console log браузера
 
 ## :electric_plug: Сборка в Jenkins
-### <a target="_blank" href="https://jenkins.autotests.cloud/job/011-AlexDonskov-11-13-Ozon/">Сборка в Jenkins</a>
+### <a target="_blank" href="https://jenkins.autotests.cloud/job/SamoiloffAlfaTet/">Сборка в Jenkins</a>
 <p align="center">
 <img title="Jenkins Dashboard" src="images/screenshots/jenkins-dashboard.png">
 </p>  
